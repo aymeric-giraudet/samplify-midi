@@ -56,14 +56,14 @@ async function playMidi(file) {
   //get the tracks
   midi.tracks.forEach(track => {
     let synth;
-    switch(track.channel) {
-      case 0:
+    switch(track.name) {
+      case "p1":
         synth = pulseSynth;
         break;
-      case 1:
+      case "p2":
         synth = squareSynth;
         break;
-      case 2:
+      case "tr":
         synth = triangleSynth;
         break;
       default:
